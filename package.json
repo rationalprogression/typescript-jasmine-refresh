@@ -1,0 +1,8 @@
+{
+  "name": "typescript-reference",
+  "version": "1.0.0",
+  "main": "app.ts",
+  "repository": "git@github.com:robyvandamme/typescript-reference.git",
+  "author": "Roby Van Damme <roby@robyvandamme.com>",
+  "license": "MIT"
+}

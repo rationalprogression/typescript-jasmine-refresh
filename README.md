@@ -9,12 +9,13 @@ Typescript reference application
 
 ## Useful commands
 
-- tsc init
+- yarn init --yes
+- tsc --init
 - tslint --init
 
 ## Double quotes vs single quotes
 
-- https://stackoverflow.com/questions/242813/when-to-use-double-or-single-quotes-in-javascript
+- [Double quotes vs single quotes](https://stackoverflow.com/questions/242813/when-to-use-double-or-single-quotes-in-javascript) on SO
 - The default for TSLint is double quotes, so use that...
 
 ## Modules vs namespaces
@@ -32,6 +33,7 @@ So: use modules, organize in directories, until we run into something....
 
 ## Yarn vs NPM
 
-- Giving Yarn a try
+- Giving [Yarn](https://yarnpkg.com/en/docs) a try
+
 
 
