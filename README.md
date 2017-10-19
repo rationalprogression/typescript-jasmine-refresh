@@ -2,17 +2,45 @@
 
 Typescript reference application
 
+## Dependencies
+
+- [NodeJS](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/en/docs) or [NPM](https://www.npmjs.com/). I'm using Yarn here to test it out.
+- [Typescript](https://www.typescriptlang.org/index.html)
+    - `yarn global add typescript`
+    - `npm install -g typescript`
+- [Jasmine](https://jasmine.github.io/setup/nodejs.html)
+    - `yarn global add jasmine`
+    - `npm install -g jasmine`
+- [Gulp](https://gulpjs.com/)
+    - `yarn global add gulp-cli`
+    - `npm install gulp-cli -g`
+
+## Getting started
+
+- yarn install
+
+### Running tests
+
+- tsc
+- gulp test
+
+### Debugging tests
+
+- F5
+
 ## Resources
 
-- [TypeScript](https://www.typescriptlang.org/index.html)
-- TSLint [docs](https://palantir.github.io/tslint/) and [repo](https://github.com/palantir/tslint) 
+- TSLint [docs](https://palantir.github.io/tslint/) and [repo](https://github.com/palantir/tslint)
 - [TypeScript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+- [Jasmine code snippets for VS Code](https://marketplace.visualstudio.com/items?itemName=xabikos.JasmineSnippets)
 
 ## Useful commands
 
 - yarn init --yes
 - tsc --init
 - tslint --init
+- yarn add --dev `packagename`
 
 ## Double quotes vs single quotes
 
@@ -35,6 +63,3 @@ So: use modules, organize in directories, until we run into something....
 ## Yarn vs NPM
 
 - Giving [Yarn](https://yarnpkg.com/en/docs) a try
-
-
-
