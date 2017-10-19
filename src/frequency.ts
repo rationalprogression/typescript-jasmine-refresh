@@ -1,1 +1,0 @@
-type Frequency = "monthly" | "quarterly";

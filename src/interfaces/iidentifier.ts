@@ -1,3 +1,3 @@
 export interface IIdentifier {
-    id: string;
+    id: number;
 }

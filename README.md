@@ -9,9 +9,9 @@ Typescript reference application
 - [Typescript](https://www.typescriptlang.org/index.html)
     - `yarn global add typescript`
     - `npm install -g typescript`
-- [Jasmine](https://jasmine.github.io/setup/nodejs.html)
+<!-- - [Jasmine](https://jasmine.github.io/setup/nodejs.html)
     - `yarn global add jasmine`
-    - `npm install -g jasmine`
+    - `npm install -g jasmine` -->
 - [Gulp](https://gulpjs.com/)
     - `yarn global add gulp-cli`
     - `npm install gulp-cli -g`
@@ -34,6 +34,8 @@ Typescript reference application
 - TSLint [docs](https://palantir.github.io/tslint/) and [repo](https://github.com/palantir/tslint)
 - [TypeScript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 - [Jasmine code snippets for VS Code](https://marketplace.visualstudio.com/items?itemName=xabikos.JasmineSnippets)
+- [Jamine-node](https://github.com/mhevery/jasmine-node)
+- [Jasmine-ts](https://github.com/svi3c/jasmine-ts)
 
 ## Useful commands
 

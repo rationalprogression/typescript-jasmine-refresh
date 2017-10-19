@@ -1,6 +1,7 @@
-import { IIdentifier } from "./lib/iidentifier";
+import { IPerson } from "./interfaces/iperson";
 
-export class Person implements IIdentifier {
-    public id: string;
+export class Person implements IPerson {
+    public id: number;
     public name: string;
+    public age: number;
 }

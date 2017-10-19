@@ -1,1 +1,1 @@
-export enum Genre {"Science-Fiction",  "Poetry", "Philosophy" }
+export enum Genre { "ScienceFiction",  "Poetry", "Philosophy" }
