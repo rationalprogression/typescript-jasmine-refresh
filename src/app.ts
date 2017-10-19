@@ -1,4 +1,4 @@
-import * as util from './lib/utilities';
+import * as util from "./lib/utilities";
 
 util.log("started");
 

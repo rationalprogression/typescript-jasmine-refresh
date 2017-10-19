@@ -6,6 +6,7 @@ Typescript reference application
 
 - [TypeScript](https://www.typescriptlang.org/index.html)
 - TSLint [docs](https://palantir.github.io/tslint/) and [repo](https://github.com/palantir/tslint) 
+- [TypeScript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 
 ## Useful commands
 
