@@ -1,9 +1,9 @@
-import { Book } from "./book";
-import { IPublication } from "./interfaces/ipublication";
-import { Magazine } from "./magazine";
+import { Book } from "./Book";
+import { IPublication } from "./interfaces/IPublication";
+import { Magazine } from "./Magazine";
 import { PublicationType } from "./types";
 
-export class Collection<T extends IPublication> {
+export class Catalog<T extends IPublication> {
 
     private items: T[] = new Array<T>();
 

@@ -1,5 +1,5 @@
-import { IPublication } from "./interfaces/ipublication";
-import { Person } from "./person";
+import { IPublication } from "./interfaces/IPublication";
+import { Person } from "./Person";
 
 export class Author extends Person {
     public bio: string;

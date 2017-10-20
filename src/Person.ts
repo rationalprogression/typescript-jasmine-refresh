@@ -1,4 +1,4 @@
-import { IPerson } from "./interfaces/iperson";
+import { IPerson } from "./interfaces/IPerson";
 
 export class Person implements IPerson {
     public id: number;

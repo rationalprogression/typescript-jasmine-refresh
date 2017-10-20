@@ -1,7 +1,7 @@
-import { Author } from "../src/author";
-import { Book } from "../src/book";
-import { Collection } from "../src/collection";
-import { User } from "../src/user";
+import { Author } from "../src/Author";
+import { Book } from "../src/Book";
+import { Catalog } from "../src/Catalog";
+import { User } from "../src/User";
 
 let user: User;
 

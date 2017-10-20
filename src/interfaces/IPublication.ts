@@ -1,5 +1,5 @@
 import { PublicationType } from "../types";
-import { IIdentifier } from "./iidentifier";
+import { IIdentifier } from "./IIdentifier";
 
 export interface IPublication extends IIdentifier {
     title: string;

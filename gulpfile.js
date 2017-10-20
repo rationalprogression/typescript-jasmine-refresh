@@ -28,6 +28,7 @@ function test() {
     })
     .on('error', function(err) {
         // catch errors to prevent the watch from stopping
+        // TODO: (node:61000) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 uncaughtException listeners added. Use emitter.setMaxListeners() to increase limit
       }));
 }
 
@@ -41,5 +42,6 @@ function watch(){
     }))
     .on('error', function(err) {
         // catch errors to prevent the watch from stopping
+         // TODO: (node:61000) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 uncaughtException listeners added. Use emitter.setMaxListeners() to increase limit
       }));
 }

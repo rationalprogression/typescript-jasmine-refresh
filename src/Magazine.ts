@@ -1,5 +1,5 @@
-import { Article } from "./article";
-import { IPublication } from "./interfaces/ipublication";
+import { Article } from "./Article";
+import { IPublication } from "./interfaces/IPublication";
 import { Frequency, PublicationType } from "./types";
 
 export class Magazine implements IPublication {
