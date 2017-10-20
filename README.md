@@ -36,6 +36,10 @@ Typescript reference application
 - [Jasmine code snippets for VS Code](https://marketplace.visualstudio.com/items?itemName=xabikos.JasmineSnippets)
 - [Jamine-node](https://github.com/mhevery/jasmine-node)
 - [Jasmine-ts](https://github.com/svi3c/jasmine-ts)
+- [TypeScript StyleGuide and Coding Conventions](https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md)
+- [TypeScript Styleguide](https://github.com/excelmicro/typescript) based on the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+- [Microsoft's TypeScript coding guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
+- https://github.com/ivogabe/gulp-typescript
 
 ## Useful commands
 
