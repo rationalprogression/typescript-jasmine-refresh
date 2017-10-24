@@ -1,47 +1,32 @@
 const gulp = require('gulp');
 const jasmine = require('gulp-jasmine');
 const reporters = require('jasmine-reporters');
-const ts = require('gulp-typescript');
-
-// var tsProject = ts.createProject("tsconfig.json", { compileOnSave: true });
-
-// gulp.task('build', () => {
-//     build();
-// })
 
 gulp.task('test', () => {
-    test();
+    test(true);
 });
 
 gulp.task('watch', () => {
-    test();
+    test(true);
     watch();
 });
 
-function test() {
+function test(verbose) {
     gulp.src('js/spec/**/*Spec.js')
     // gulp-jasmine works on filepaths so you can't have any plugins before it
     .pipe(jasmine({
-        verbose: true,
+        verbose: verbose,
         errorOnFail: false,
         // reporter: new reporters.NUnitXmlReporter()
     })
     .on('error', function(err) {
-        // catch errors to prevent the watch from stopping
-        // TODO: (node:61000) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 uncaughtException listeners added. Use emitter.setMaxListeners() to increase limit
+         // catch errors to prevent the watch from stopping
+         console.log(err);
+         // Fix for (node:61000) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 uncaughtException listeners added. Use emitter.setMaxListeners() to increase limit
+         process.exit(1);
       }));
 }
 
 function watch(){
-    gulp.watch(['js/src/**/*.js', 'js/spec/**/*Spec.js'], () =>
-    gulp.src('js/spec/**/*Spec.js')
-    // gulp-jasmine works on filepaths so you can't have any plugins before it
-    .pipe(jasmine({
-        verbose: true,
-        errorOnFail: false
-    }))
-    .on('error', function(err) {
-        // catch errors to prevent the watch from stopping
-         // TODO: (node:61000) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 uncaughtException listeners added. Use emitter.setMaxListeners() to increase limit
-      }));
+    gulp.watch(['js/src/**/*.js', 'js/spec/**/*Spec.js'], () => test(false));
 }
