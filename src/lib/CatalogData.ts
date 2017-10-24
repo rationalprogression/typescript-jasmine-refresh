@@ -7,14 +7,14 @@ import { PublicationType } from "../types/PublicationType";
 
 export default class CatalogData {
 
-    public static GetSingleMagazine(): Magazine {
+    public static getSingleMagazine(): Magazine {
         const magazine = new Magazine();
         magazine.frequency = "monthly";
         magazine.title = "Time";
         return magazine;
     }
 
-    public static GetFourBooks(): Book[] {
+    public static getFourBooks(): Book[] {
 
         const books = new Array<Book>();
 
@@ -49,7 +49,7 @@ export default class CatalogData {
         return books;
     }
 
-    public static GetTwoMagazines(): Magazine[] {
+    public static getTwoMagazines(): Magazine[] {
 
         const mags = new Array<Magazine>();
 
@@ -67,7 +67,7 @@ export default class CatalogData {
         return mags;
     }
 
-    public static GetSingleBook(): Book {
-        return this.GetFourBooks()[0];
+    public static getSingleBook(): Book {
+        return this.getFourBooks()[0];
     }
 }

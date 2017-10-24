@@ -5,20 +5,20 @@ import { Magazine } from "../src/Magazine";
 let magazine: Magazine;
 
 describe("Magazine", () => {
-    it("Id is auto generated", () => {
+    it("id is auto generated", () => {
         magazine = new Magazine();
         expect(magazine.id).toBeDefined();
         expect(validator.isUUID(magazine.id)).toEqual(true);
     });
-    it("Published is false by default", () => {
+    it("published is false by default", () => {
         expect(magazine.isPublished).toEqual(false);
         expect(magazine.publicationDate).toBeUndefined();
     });
-    it("Published is set to true on publish", () => {
+    it("published is set to true on publish", () => {
         magazine.publish();
         expect(magazine.isPublished).toEqual(true);
     });
-    it("Allows adding articles and publishing using a fluent interface", () => {
+    it("allows adding articles and publishing using a fluent interface", () => {
         const article = new Article();
         const mag = magazine.add(article).publish();
         expect(mag).toBe(magazine);

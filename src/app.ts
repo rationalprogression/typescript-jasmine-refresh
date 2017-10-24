@@ -1,14 +1,14 @@
 import { default as util } from "./lib/Utilities";
 
-util.Log("started");
+util.log("started");
 
 class Startup {
     public static main(): number {
-        util.Log("main");
+        util.log("main");
         return 0;
     }
 }
 
 Startup.main();
 
-util.Log("ended");
+util.log("ended");

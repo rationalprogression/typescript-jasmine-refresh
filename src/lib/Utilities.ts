@@ -1,12 +1,12 @@
 import { v4 } from "uuid";
 
 export default class Utilities {
-    public static Log(input: any) {
+    public static log(input: any) {
         // tslint:disable-next-line:no-console
         console.log(input);
     }
 
-    public static GenerateId(): string {
+    public static generateId(): string {
         return v4();
     }
 }

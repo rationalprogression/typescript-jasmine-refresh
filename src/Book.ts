@@ -5,7 +5,7 @@ import { default as utils } from "./lib/Utilities";
 import { PublicationType } from "./types/PublicationType";
 
 export class Book implements IPublication {
-    public readonly id: string = utils.GenerateId();
+    public readonly id: string = utils.generateId();
     public title: string;
     public author: string;
     public genre: Genre;
