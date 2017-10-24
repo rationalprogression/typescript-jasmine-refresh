@@ -18,8 +18,8 @@ export default class Guards {
         if (arg.id === undefined) {
             return false;
         }
-        if (typeof arg.id === "string" && validator.isUUID(arg.id)){
-                return true;
+        if (typeof arg.id === "string" && validator.isUUID(arg.id)) {
+            return true;
         } else {
             return false;
         }
