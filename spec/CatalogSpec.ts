@@ -12,37 +12,62 @@ beforeEach(() => {
 describe("Catalog", () => {
 
     describe("Add", () => {
-
-        it("adds a book ", () => {
-
+        it("adds a book", () => {
             catalog.add(data.GetSingleBook());
             expect(catalog.count()).toEqual(1);
-
         });
-
+        it("adds multiple books", () => {
+            catalog.add(data.GetSingleBook(), data.GetSingleBook(), data.GetSingleBook());
+            expect(catalog.count()).toEqual(3);
+            catalog.add(data.GetSingleBook(), ...data.GetFourBooks());
+            expect(catalog.count()).toEqual(8);
+        });
         it("adds a magazine ", () => {
-
             catalog.add(data.GetSingleMagazine());
             expect(catalog.count()).toEqual(1);
-
+        });
+        it("adds multiple magazines", () => {
+            catalog.add(data.GetSingleMagazine(), data.GetSingleMagazine());
+            expect(catalog.count()).toEqual(2);
+            catalog.add(data.GetSingleMagazine(), ...data.GetTwoMagazines());
+            expect(catalog.count()).toEqual(5);
+        });
+        it("does not add null", () => {
+            catalog.add(null);
+            expect(catalog.count()).toEqual(0);
+            catalog.add(data.GetSingleMagazine(), null);
+            expect(catalog.count()).toEqual(1);
+        });
+        it("does not add undefined", () => {
+            catalog.add(undefined);
+            expect(catalog.count()).toEqual(0);
+            catalog.add(data.GetSingleMagazine(), undefined);
+            expect(catalog.count()).toEqual(1);
         });
     });
 
     describe("AddMany", () => {
-
         it("adds Books", () => {
-
             catalog.addMany(data.GetFourBooks());
             expect(catalog.count()).toEqual(4);
-
         });
         it("adds Magazines", () => {
-
             catalog.addMany(data.GetTwoMagazines());
             expect(catalog.count()).toEqual(2);
-
         });
     });
+
+    // describe("AddWithRestParamter", () => {
+    //     it("excepts one", () => {
+    //         catalog.addWithRestParameter(data.GetSingleBook(), data.GetSingleMagazine());
+    //         expect(catalog.count()).toEqual(2);
+    //     });
+    //     it("adds more than one", () => {
+    //         catalog.addWithRestParameter(data.GetSingleBook(), data.GetSingleMagazine(), data.GetSingleBook(),
+    //         data.GetSingleMagazine());
+    //         expect(catalog.count()).toEqual(4);
+    //     });
+    // });
 
     describe("Remove", () => {
 

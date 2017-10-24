@@ -11,13 +11,20 @@ export class Catalog<T extends IPublication> {
         return this.items.length;
     }
 
-    public add(item: T): void {
-        this.items.push(item);
+    public add(item: T, ...items: T[]): void {
+        if (item !== null && item !== undefined) {
+            this.items.push(item);
+        }
+        if (items !== null && items !== undefined) {
+            items.forEach((extraItem) => {
+                this.add(extraItem);
+            });
+        }
     }
 
     public addMany(items: T[]): void {
         items.forEach((item) => {
-            this.items.push(item);
+            this.add(item);
         });
     }
 
@@ -64,4 +71,5 @@ export class Catalog<T extends IPublication> {
     public getByType(type: PublicationType): IPublication[] {
         return this.items.filter(((item) => item.type === type));
     }
+
 }
