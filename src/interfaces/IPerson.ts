@@ -1,6 +1,6 @@
 import { IIdentifier } from "./IIdentifier";
 
 export interface IPerson extends IIdentifier {
-    id: number;
+    id: string;
     name: string;
 }

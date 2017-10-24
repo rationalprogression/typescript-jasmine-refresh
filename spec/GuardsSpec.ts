@@ -1,3 +1,4 @@
+import { v4 } from "uuid";
 import { Book } from "../src/Book";
 import { default as Guards } from "../src/Guards";
 import { Magazine } from "../src/Magazine";
@@ -20,18 +21,29 @@ describe("Guards", () => {
     });
 
     describe("IsIdentifiable", () => {
-        it("returns true for a book with an id", () => {
-            const book = new Book();
-            book.id = 1;
-            expect(Guards.IsIdentifiable(book)).toBe(true);
+        it("returns true for an object with an id that is a uuid", () => {
+            const sample = {
+                id:  v4(),
+            };
+            expect(Guards.IsIdentifiable(sample)).toBe(true);
         });
-        it("returns false for a book without an id", () => {
-            const book = new Book();
-            expect(Guards.IsIdentifiable(book)).toBe(false);
+        it("returns false for an object with an id that is null", () => {
+            const sample = {
+                id:  null,
+            };
+            expect(Guards.IsIdentifiable(sample)).toBe(false);
         });
-        it("returns false for a string", () => {
-            const name = "a string";
-            expect(Guards.IsIdentifiable(name)).toBe(false);
+        it("returns false for an object with an id that is undefined", () => {
+            const sample = {
+                id:  undefined,
+            };
+            expect(Guards.IsIdentifiable(sample)).toBe(false);
+        });
+        it("returns false for an object with an id that is not a uuid", () => {
+            const sample = {
+                id: "not an id",
+            };
+            expect(Guards.IsIdentifiable(sample)).toBe(false);
         });
     });
 });

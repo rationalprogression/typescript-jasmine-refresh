@@ -28,9 +28,9 @@ export class Catalog<T extends IPublication> {
         });
     }
 
-    public remove(id: number, type: PublicationType): boolean {
+    public remove(id: string): boolean {
         for (let i = this.items.length - 1; i >= 0; i--) {
-            if (this.items[i].id === id && this.items[i].type === type) {
+            if (this.items[i].id === id) {
                 this.items.splice(i, 1);
                 return true;
             }
@@ -38,18 +38,14 @@ export class Catalog<T extends IPublication> {
         return false;
     }
 
-    public get(id: number, type: PublicationType): T | undefined {
-        for (let i = this.items.length - 1; i >= 0; i--) {
-            if (this.items[i].id === id && this.items[i].type === type) {
-                return this.items[i];
-            }
-        }
+    public get(id: string): T | undefined {
+        return this.items.filter(((item) => item.id === id))[0];
     }
 
     public getBooks(): Book[] {
         const books: Book[] = new Array<Book>();
         this.items.forEach((item) => {
-            // we should obviously use the type property here instead
+            // we should obviously use the type property here instead?
             if (item instanceof Book) {
                 books.push(item);
             }
@@ -60,7 +56,7 @@ export class Catalog<T extends IPublication> {
     public getMagazines(): Magazine[] {
         const magazines: Magazine[] = new Array<Magazine>();
         this.items.forEach((item) => {
-             // we should obviously use the type property here instead
+            // we should obviously use the type property here instead?
             if (item instanceof Magazine) {
                 magazines.push(item);
             }
@@ -71,5 +67,4 @@ export class Catalog<T extends IPublication> {
     public getByType(type: PublicationType): IPublication[] {
         return this.items.filter(((item) => item.type === type));
     }
-
 }

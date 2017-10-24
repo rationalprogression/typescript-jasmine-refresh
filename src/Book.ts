@@ -1,11 +1,11 @@
 import { Author } from "./Author";
 import { Genre } from "./enums/Genre";
 import { IPublication } from "./interfaces/IPublication";
+import { default as utils } from "./lib/Utilities";
 import { PublicationType } from "./types/PublicationType";
 
 export class Book implements IPublication {
-
-    public id: number;
+    public readonly id: string = utils.GenerateId();
     public title: string;
     public author: string;
     public genre: Genre;
