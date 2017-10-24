@@ -31,6 +31,7 @@ Typescript reference application
 
 ## Resources
 
+- [Typescript Deep Dive eBook](https://www.gitbook.com/book/basarat/typescript)
 - TSLint [docs](https://palantir.github.io/tslint/) and [repo](https://github.com/palantir/tslint)
 - [TypeScript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 - [Jasmine code snippets for VS Code](https://marketplace.visualstudio.com/items?itemName=xabikos.JasmineSnippets)
@@ -40,6 +41,7 @@ Typescript reference application
 - [TypeScript Styleguide](https://github.com/excelmicro/typescript) based on the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 - [Microsoft's TypeScript coding guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
 - https://github.com/ivogabe/gulp-typescript
+- [Microsoft starter template for TypeScript and Node](https://github.com/Microsoft/TypeScript-Node-Starter)
 
 ## Useful commands
 
