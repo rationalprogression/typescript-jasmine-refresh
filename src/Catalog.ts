@@ -1,7 +1,7 @@
 import { Book } from "./Book";
 import { IPublication } from "./interfaces/IPublication";
 import { Magazine } from "./Magazine";
-import { PublicationType } from "./types";
+import { PublicationType } from "./types/PublicationType";
 
 export class Catalog<T extends IPublication> {
 

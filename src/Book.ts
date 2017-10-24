@@ -1,7 +1,7 @@
 import { Author } from "./Author";
-import { Genre } from "./enums";
+import { Genre } from "./enums/Genre";
 import { IPublication } from "./interfaces/IPublication";
-import { PublicationType } from "./types";
+import { PublicationType } from "./types/PublicationType";
 
 export class Book implements IPublication {
     public id: number;

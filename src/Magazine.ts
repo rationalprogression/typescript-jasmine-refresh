@@ -1,6 +1,7 @@
 import { Article } from "./Article";
 import { IPublication } from "./interfaces/IPublication";
-import { Frequency, PublicationType } from "./types";
+import { Frequency } from "./types/Frequency";
+import { PublicationType } from "./types/PublicationType";
 
 export class Magazine implements IPublication {
     public id: number;
