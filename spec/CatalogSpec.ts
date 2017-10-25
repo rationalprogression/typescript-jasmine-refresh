@@ -33,18 +33,20 @@ describe("Catalog", () => {
             catalog.add(data.getSingleMagazine(), ...data.getTwoMagazines());
             expect(catalog.count()).toEqual(5);
         });
-        it("does not add null", () => {
-            catalog.add(null);
-            expect(catalog.count()).toEqual(0);
-            catalog.add(data.getSingleMagazine(), null);
-            expect(catalog.count()).toEqual(1);
-        });
-        it("does not add undefined", () => {
-            catalog.add(undefined);
-            expect(catalog.count()).toEqual(0);
-            catalog.add(data.getSingleMagazine(), undefined);
-            expect(catalog.count()).toEqual(1);
-        });
+        // caught by compiler option  "strict": true
+        // it("does not add null", () => {
+        //     catalog.add(null);
+        //     expect(catalog.count()).toEqual(0);
+        //     catalog.add(data.getSingleMagazine(), null);
+        //     expect(catalog.count()).toEqual(1);
+        // });
+         // caught by compiler option  "strict": true
+        // it("does not add undefined", () => {
+        //     catalog.add(undefined);
+        //     expect(catalog.count()).toEqual(0);
+        //     catalog.add(data.getSingleMagazine(), undefined);
+        //     expect(catalog.count()).toEqual(1);
+        // });
     });
 
     describe("addMany", () => {
@@ -98,14 +100,16 @@ describe("Catalog", () => {
     });
 
     describe("get", () => {
-        it("returns undefined if parameter is null", () => {
-            const result = catalog.get(null);
-            expect(result).toBeUndefined();
-        });
-        it("returns undefined if parameter is undefined", () => {
-            const result = catalog.get(undefined);
-            expect(result).toBeUndefined();
-        });
+         // caught by compiler option  "strict": true
+        // it("returns undefined if parameter is null", () => {
+        //     const result = catalog.get(null);
+        //     expect(result).toBeUndefined();
+        // });
+         // caught by compiler option  "strict": true
+        // it("returns undefined if parameter is undefined", () => {
+        //     const result = catalog.get(undefined);
+        //     expect(result).toBeUndefined();
+        // });
         it("returns undefined if catalog is empty", () => {
             const result = catalog.get("id");
             expect(result).toBeUndefined();

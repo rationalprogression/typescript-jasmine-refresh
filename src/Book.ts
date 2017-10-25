@@ -1,4 +1,3 @@
-import { Author } from "./Author";
 import { Genre } from "./enums/Genre";
 import { IPublication } from "./interfaces/IPublication";
 import { default as utils } from "./lib/Utilities";

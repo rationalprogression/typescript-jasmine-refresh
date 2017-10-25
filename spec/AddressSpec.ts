@@ -8,7 +8,7 @@ describe("Address", () => {
         expect(validator.isUUID(address.id)).toBe(true);
     });
     it("properties can only be set in the constructor", () => {
-        const address = new Address("street", "zipCode", "city", "country");
+        // const address = new Address("street", "zipCode", "city", "country");
         // error TS2540: Cannot assign to 'city' because it is a constant or a read-only property.
         // address.city = "another city";
     });

@@ -1,9 +1,6 @@
 import { Book } from "../Book";
-import { Catalog } from "../Catalog";
 import { Genre } from "../enums/Genre";
 import { Magazine } from "../Magazine";
-import { Frequency } from "../types/Frequency";
-import { PublicationType } from "../types/PublicationType";
 
 export default class CatalogData {
 
