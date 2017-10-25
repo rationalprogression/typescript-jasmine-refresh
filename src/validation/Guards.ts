@@ -1,6 +1,6 @@
 import * as validator from "validator";
-import { Book } from "./Book";
-import { IIdentifiable } from "./lib/IIdentifiable";
+import { Book } from "../Book";
+import { IIdentifiable } from "../lib/IIdentifiable";
 
 export default class Guards {
 

@@ -1,6 +1,6 @@
-import { Book } from "../Book";
-import { Genre } from "../enums/Genre";
-import { Magazine } from "../Magazine";
+import { Book } from "../../src/Book";
+import { Genre } from "../../src/enums/Genre";
+import { Magazine } from "../../src/Magazine";
 
 export default class CatalogData {
 

@@ -1,6 +1,6 @@
 import { Book } from "../Book";
 import { Catalog } from "../Catalog";
-import { default as Data } from "../lib/CatalogData";
+import { default as Data } from "../data/CatalogData";
 import { default as Logger } from "../lib/Logger";
 
 export class CatalogService {

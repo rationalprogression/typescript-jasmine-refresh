@@ -1,7 +1,7 @@
 import { v4 } from "uuid";
 import { Book } from "../src/Book";
-import { default as Guards } from "../src/Guards";
 import { Magazine } from "../src/Magazine";
+import { default as Guards } from "../src/validation/Guards";
 
 describe("Guards", () => {
 
