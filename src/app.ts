@@ -1,14 +1,14 @@
-import { default as util } from "./lib/Utilities";
+import { default as logger } from "./lib/Logger";
 
-util.log("started");
+logger.info("started");
 
 class Startup {
     public static main(): number {
-        util.log("main");
+        logger.info("main");
         return 0;
     }
 }
 
 Startup.main();
 
-util.log("ended");
+logger.info("ended");
