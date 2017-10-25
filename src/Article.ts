@@ -1,10 +1,9 @@
 import { Genre } from "./enums/Genre";
 import { IPublication } from "./interfaces/IPublication";
-import { default as utils } from "./lib/Utilities";
+import { Identifiable } from "./lib/Identifiable";
 import { PublicationType } from "./types/PublicationType";
 
-export class Article implements IPublication {
-    public readonly id: string = utils.generateId();
+export class Article extends Identifiable implements IPublication {
     public title: string;
     public readonly type: PublicationType = "article";
     public author: string;

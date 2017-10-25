@@ -1,6 +1,5 @@
-import { IIdentifier } from "./IIdentifier";
+import { IIdentifiable } from "../lib/IIdentifiable";
 
-export interface IPerson extends IIdentifier {
-    id: string;
+export interface IPerson extends IIdentifiable {
     name: string;
 }

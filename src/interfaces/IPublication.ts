@@ -1,7 +1,7 @@
+import { IIdentifiable } from "../lib/IIdentifiable";
 import { PublicationType } from "../types/PublicationType";
-import { IIdentifier } from "./IIdentifier";
 
-export interface IPublication extends IIdentifier {
+export interface IPublication extends IIdentifiable {
     title: string;
     type: PublicationType;
 }

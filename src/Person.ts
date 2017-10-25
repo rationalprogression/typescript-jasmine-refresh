@@ -1,7 +1,7 @@
 import { IPerson } from "./interfaces/IPerson";
+import { Identifiable } from "./lib/Identifiable";
 
-export class Person implements IPerson {
-    public id: string;
+export class Person extends Identifiable implements IPerson {
     public name: string;
     public age: number;
 }
