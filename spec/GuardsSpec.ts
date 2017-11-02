@@ -1,5 +1,6 @@
 import { v4 } from "uuid";
 import { Book } from "../src/Book";
+import { Identifiable } from "../src/lib/Identifiable";
 import { Magazine } from "../src/Magazine";
 import { default as Guards } from "../src/validation/Guards";
 
@@ -27,6 +28,10 @@ describe("Guards", () => {
             };
             expect(Guards.isIdentifiable(sample)).toBe(true);
         });
+        it("returns true for an instance of Identfiable", () => {
+            const sample = new Identifiable();
+            expect(Guards.isIdentifiable(sample)).toBe(true);
+        });
         // caught by compiler option  "strict": true
         // it("returns false for an object with an id that is null", () => {
         //     const sample = {
@@ -44,6 +49,12 @@ describe("Guards", () => {
         it("returns false for an object with an id that is not a uuid", () => {
             const sample = {
                 id: "not an id",
+            };
+            expect(Guards.isIdentifiable(sample)).toBe(false);
+        });
+        it("returns false for an object with an id that is an empty uuid", () => {
+            const sample = {
+                id: "00000000-0000-0000-0000-000000000000",
             };
             expect(Guards.isIdentifiable(sample)).toBe(false);
         });

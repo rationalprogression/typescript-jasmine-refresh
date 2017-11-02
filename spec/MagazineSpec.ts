@@ -1,6 +1,7 @@
 import * as validator from "validator";
 import { Article } from "../src/Article";
 import { Magazine } from "../src/Magazine";
+import { default as Guards } from "../src/validation/Guards";
 
 let magazine: Magazine;
 
@@ -9,6 +10,7 @@ describe("Magazine", () => {
         magazine = new Magazine();
         expect(magazine.id).toBeDefined();
         expect(validator.isUUID(magazine.id)).toEqual(true);
+        expect(Guards.isIdentifiable(magazine)).toBe(true);
     });
     it("published is false by default", () => {
         expect(magazine.isPublished).toEqual(false);
