@@ -18,14 +18,14 @@ Exploring TypeScript with Jasmine for future reference. Code and tests.
 
 ### Command line
 
-- `tsc` to compile the typescript and watch for changes
-- `gulp test` to run the tests
-- `gulp watch` to run the tests and watch for changes
+- `gulp`: compile, lint and test
+- `gulp watch`: compile, lint and test on change
+- adding the `--vebose` argument will provide detailed test output
 
 ### Visual Studio Code
 
+- `Tasks: Run Test Task` runs the `gulp watch` task, no need to  run a separate build task.
 - `Tasks: Run Build Task` will compile the typescript and watch for changes
-- `Tasks: Run Test Task` will run the tests and watch for changes
 - `F5` or `Debug: Start Debugging` will run the tests in debug mode
 
 ## Resources

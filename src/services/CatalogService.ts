@@ -21,6 +21,7 @@ export class CatalogService {
             } else {
                 reject(new Error("No books to be found"));
             }
+
         });
         return promise;
     }
@@ -43,8 +44,8 @@ export class CatalogService {
             const catalog = new Catalog<Book>();
             catalog.addMany(results);
             throw new Error("No books to be found");
-        }catch (error) {
-            Logger.error(error);
+        } catch (error) {
+            // Logger.error(error);
             throw error;
         }
     }

@@ -13,7 +13,7 @@ export class Magazine extends Identifiable implements IPublication {
     private _articles: Article[] = new Array<Article>();
     private _publicationDate: Date;
 
-    get isPublished(): boolean{
+    get isPublished(): boolean {
         if (this._publicationDate === undefined) {
             return false;
         }
@@ -24,7 +24,7 @@ export class Magazine extends Identifiable implements IPublication {
         return this._articles;
     }
 
-    get publicationDate(): Date{
+    get publicationDate(): Date {
         return this._publicationDate;
     }
 
