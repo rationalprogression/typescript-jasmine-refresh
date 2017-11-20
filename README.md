@@ -1,6 +1,6 @@
 # TypeScript-Jasmine-Refresh
 
-Exploring TypeScript with Jasmine for future reference. Code and tests.
+Exploring [TypeScript](https://www.typescriptlang.org/index.html) with [Jasmine](https://jasmine.github.io) for future reference. Code and tests.
 
 ## Global dependencies
 
@@ -20,7 +20,7 @@ Exploring TypeScript with Jasmine for future reference. Code and tests.
 
 - `gulp`: compile, lint and test
 - `gulp watch`: compile, lint and test on change
-- adding the `--vebose` argument will provide detailed test output
+- adding the `--verbose` argument will provide detailed test output
 
 ### Visual Studio Code
 
@@ -32,7 +32,7 @@ Exploring TypeScript with Jasmine for future reference. Code and tests.
 
 ### TypeScript
 
-- [The TypeScript website](https://www.typescriptlang.org/index.html)
+- [TypeScript docs](https://www.typescriptlang.org/docs)
 - [Typescript Deep Dive free ebook](https://www.gitbook.com/book/basarat/typescript)
 - [TypeScript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 - [Microsoft starter template for TypeScript and Node](https://github.com/Microsoft/TypeScript-Node-Starter)
